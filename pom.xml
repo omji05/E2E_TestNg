@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>DemoTest</groupId>
-    <artifactId>UIDemo</artifactId>
+    <artifactId>E2E_TestNg</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>UIDemo</name>
+    <name>E2E_TestNg</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -83,7 +83,7 @@
                         <browser>${browser}</browser>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>demoTestng.xml</suiteXmlFile>
+                        <suiteXmlFile>smokeTestng.xml</suiteXmlFile>
                     </suiteXmlFiles>
 <!--                    <systemPropertyVariables>-->
 <!--                        <appURL>${url}</appURL>-->

@@ -53,21 +53,21 @@ public class BaseClass {
             //from Selenium Grid 4 we can only give URL till port i.e. http://localhost:4444
             URL gridUrl = new URL("http://localhost:4444/wd/hub");
             if (browserName.equalsIgnoreCase("chrome")) {
-                ChromeOptions options = new ChromeOptions();
+                ChromeOptions chromeOptions = new ChromeOptions();
 //                WebDriverManager.chromedriver().setup();
                 // Set Browser to ThreadLocalMap
 //                driver.set(new ChromeDriver());
-                driver.set(new RemoteWebDriver(gridUrl,options));
+                driver.set(new RemoteWebDriver(gridUrl,chromeOptions));
             } else if (browserName.equalsIgnoreCase("firefox")) {
-                FirefoxOptions options = new FirefoxOptions();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
 //                WebDriverManager.firefoxdriver().setup();
 //                driver.set(new FirefoxDriver());
-                driver.set(new RemoteWebDriver(gridUrl,options));
+                driver.set(new RemoteWebDriver(gridUrl,firefoxOptions));
             } else if (browserName.equalsIgnoreCase("IE")) {
-                InternetExplorerOptions options = new InternetExplorerOptions();
+                InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
 //                WebDriverManager.iedriver().setup();
 //                driver.set(new InternetExplorerDriver());
-                driver.set(new RemoteWebDriver(gridUrl,options));
+                driver.set(new RemoteWebDriver(gridUrl,internetExplorerOptions));
             }
         }catch (MalformedURLException e){
             Log.info("Exception Occured in url creation");
